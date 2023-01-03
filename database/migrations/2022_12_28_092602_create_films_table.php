@@ -18,6 +18,7 @@ class CreateFilmsTable extends Migration
             $table->foreignId('category_id');
             $table->string('title');
             $table->text('synopsis');
+            $table->double('rent_price',12,2);
             $table->double('price',12,2);
             $table->timestamps();
         });
