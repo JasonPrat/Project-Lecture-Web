@@ -16,8 +16,6 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->string('alamat');
-            $table->string('penerima');
             $table->string('type');
             $table->double('grandtotal',12,2);
             $table->timestamps();
