@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class TransactionDetail extends Model
 {
     use HasFactory;
+    protected $fillable=[
+        'transaction_id',
+        'film_id',
+        'quantity',
+        'subtotal',
+    ];
+    public function transaction(){
+        return $this->belongsTo(Transaction::class,'transaction_id');
+    }
+    public function film(){
+        return $this->belongsTo(Film::class,'film_id');
+    }
 }
