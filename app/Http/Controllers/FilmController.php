@@ -15,6 +15,8 @@ class FilmController extends Controller
     public function index()
     {
         //
+        $film=Film::paginate(4);
+        return view('welcome',['film'=>$film]);
     }
 
     /**
