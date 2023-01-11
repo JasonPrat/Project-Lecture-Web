@@ -16,6 +16,7 @@ class CreateFilmsTable extends Migration
         Schema::create('films', function (Blueprint $table) {
             $table->id();
             $table->foreignId('category_id');
+            $table->string('image');
             $table->string('title');
             $table->text('synopsis');
             $table->double('rent_price',12,2);

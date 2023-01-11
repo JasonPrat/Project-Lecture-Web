@@ -15,7 +15,7 @@ class CategorieSeeder extends Seeder
     public function run()
     {
         Category::create([
-            'name' => 'Romance'
+            'name' => 'Family'
         ]);
 
         Category::create([
@@ -31,7 +31,7 @@ class CategorieSeeder extends Seeder
         ]);
 
         Category::create([
-            'name' => 'Family'
+            'name' => 'Romance'
         ]);
     }
 }
