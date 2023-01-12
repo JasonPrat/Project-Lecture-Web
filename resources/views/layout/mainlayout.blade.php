@@ -20,7 +20,7 @@
                 <hr> 
                 <nav class="menu flex-fill">
                   <div class="section-menu">
-                    <a href="#" class="item-menu active" onclick="handleClickMenu(this)">
+                    <a href="/" class="item-menu active" onclick="handleClickMenu(this)">
                       <p>Home</p>
                     </a>
                     <div id="drop-con" style="display: flex; flex-direction: row;">
@@ -37,7 +37,7 @@
                       <p>History</p>
                     </a>
                     
-                    <a href="#" class="item-menu" onclick="handleClickMenu(this)">
+                    <a href="/contact" class="item-menu" onclick="handleClickMenu(this)">
                       <p>Contact</p>
                     </a>
                   </div>
