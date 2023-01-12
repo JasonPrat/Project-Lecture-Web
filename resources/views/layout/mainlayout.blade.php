@@ -28,9 +28,9 @@
                         Category <i class="fa fa-caret-down"></i>
                       </a>
                       <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Link 1</a>
-                        <a href="#" class="dropdown-item">Link 2</a>
-                        <a href="#" class="dropdown-item">Link 3</a>
+                        <a href="#" class="dropdown-item">Action</a>
+                        <a href="#" class="dropdown-item">Adventure</a>
+                        <a href="#" class="dropdown-item">Romance</a>
                       </div>
                     </div>
                     <a href="#" class="item-menu" onclick="handleClickMenu(this)">

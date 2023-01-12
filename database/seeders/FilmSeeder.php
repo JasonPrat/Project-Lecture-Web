@@ -24,7 +24,7 @@ class FilmSeeder extends Seeder
         ]);
 
         Film::create([
-            'category_id' => 4,
+            'category_id' => 2,
             'title' => 'Doctor Strange',
             'image' => '2.jpg',
             'synopsis' => "Doctor Strange teams up with a mysterious teenage girl from his dreams who can travel across multiverses, to battle multiple threats, including other-universe versions of himself, which threaten to wipe out millions across the multiverse. They seek help from Wanda the Scarlet Witch, Wong and others.",
@@ -33,7 +33,7 @@ class FilmSeeder extends Seeder
         ]);
 
         Film::create([
-            'category_id' => 2,
+            'category_id' => 3,
             'title' => 'Thor : Love and Thunder',
             'image' => '3.jpg',
             'synopsis' => "Thor enlists the help of Valkyrie, Korg and ex-girlfriend Jane Foster to fight Gorr the God Butcher, who intends to make the gods extinct.",
@@ -42,7 +42,7 @@ class FilmSeeder extends Seeder
         ]);
 
         Film::create([
-            'category_id' => 3,
+            'category_id' => 1,
             'title' => 'Black Panther',
             'image' => '4.jpg',
             'synopsis' => "The people of Wakanda fight to protect their home from intervening world powers as they mourn the death of King T'Challa.",

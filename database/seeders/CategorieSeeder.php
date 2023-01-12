@@ -15,15 +15,7 @@ class CategorieSeeder extends Seeder
     public function run()
     {
         Category::create([
-            'name' => 'Family'
-        ]);
-
-        Category::create([
             'name' => 'Action'
-        ]);
-
-        Category::create([
-            'name' => 'Life'
         ]);
 
         Category::create([
