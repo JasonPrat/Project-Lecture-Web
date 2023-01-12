@@ -34,7 +34,7 @@
                       </div>
                     </div>
                     <a href="#" class="item-menu" onclick="handleClickMenu(this)">
-                      <p>Publisher</p>
+                      <p>History</p>
                     </a>
                     
                     <a href="#" class="item-menu" onclick="handleClickMenu(this)">
