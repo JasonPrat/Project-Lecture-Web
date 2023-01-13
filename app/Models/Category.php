@@ -10,7 +10,7 @@ class Category extends Model
     use HasFactory;
     protected $fillable=['name'];
     public function film(){
-        return $this->belongsToMany(Film::class,'category_id','id');
+        return $this->hasMany(Film::class);
     }
 
 }

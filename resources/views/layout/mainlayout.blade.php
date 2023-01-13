@@ -3,8 +3,8 @@
     @extends('layout.partials.head')
       <body>
             <aside class="sidebar offcanvas-lg offcanvas-start">
-                
-              
+
+
                 <div class="logo-brand mt-lg-5">
                   <img
                     src="{{asset('img/logo.png')}}"
@@ -17,7 +17,7 @@
                     <p class="tagline-store">The Best Online Movie Marketplace</p>
                   </div>
                 </div>
-                <hr> 
+                <hr>
                 <nav class="menu flex-fill">
                   <div class="section-menu">
                     <a href="/" class="item-menu active" onclick="handleClickMenu(this)">
@@ -28,15 +28,15 @@
                         Category <i class="fa fa-caret-down"></i>
                       </a>
                       <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Action</a>
-                        <a href="#" class="dropdown-item">Adventure</a>
-                        <a href="#" class="dropdown-item">Romance</a>
+                        <a href="/category/1" class="dropdown-item">Action</a>
+                        <a href="/category/2" class="dropdown-item">Adventure</a>
+                        <a href="/category/3" class="dropdown-item">Romance</a>
                       </div>
                     </div>
                     <a href="#" class="item-menu" onclick="handleClickMenu(this)">
                       <p>History</p>
                     </a>
-                    
+
                     <a href="/contact" class="item-menu" onclick="handleClickMenu(this)">
                       <p>Contact</p>
                     </a>
@@ -75,9 +75,9 @@
                   </div>
                   <p class="footerText-1">©2022 Disniplix. All rights reserved.</p>
                   <p class="footerText-2">Web Programming Project</p>
-                  
+
                 </footer>
-              
+
             </aside>
             @yield('content')
 

@@ -1,6 +1,6 @@
 @extends('layout.mainlayout')
 @section('content')
-<main class="content flex-fill">    
+<main class="content flex-fill">
     <section>
       <nav class="nav-content gap-3">
         <div class="d-flex gap-3 align-items-center">
@@ -10,7 +10,7 @@
         </div>
       </nav>
     </section>
-  
+
     <section class="d-flex flex-column gap-3">
       <div class="d-flex justify-content-between align-items-center gap-3">
         <h4 class="title-section-content">CONTACT</h4>
@@ -20,7 +20,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="panelsStayOpen-headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
-                <img src="{{ asset('/storage/img/location-pin.png')}}" alt="image error" width="50" height="50">
+                <img src="{{ asset('/img/location-pin.png')}}" alt="image error" width="50" height="50">
                 <h3 class="fw-bold text-dark">COMPANY ADDRESS : </h3>
             </button>
           </h2>
@@ -36,7 +36,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                <img src="{{ asset('/storage/img/open.png')}}" alt="image error" width="50" height="50">
+                <img src="{{ asset('/img/open.png')}}" alt="image error" width="50" height="50">
                 <h3 class="fw-bold text-dark">WORK HOURS: </h3>
             </button>
           </h2>
@@ -49,7 +49,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="panelsStayOpen-headingThree">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                <img src="{{ asset('/storage/img/email.png')}}" alt="image error" width="50" height="50">
+                <img src="{{ asset('/img/email.png')}}" alt="image error" width="50" height="50">
                 <h3 class="fw-bold text-dark">CONTACT US : </h3>
             </button>
           </h2>
