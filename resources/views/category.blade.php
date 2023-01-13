@@ -14,7 +14,7 @@
 
   <section class="d-flex flex-column gap-3">
     <div class="d-flex justify-content-between align-items-center gap-3">
-      <h4 class="title-section-content">Recommended Film</h4>
+      <h4 class="title-section-content">{{ $category->name }}</h4>
     </div>
 
     <div class="d-flex gap-3 flex-wrap">
