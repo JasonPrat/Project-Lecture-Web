@@ -28,9 +28,10 @@
                         Category <i class="fa fa-caret-down"></i>
                       </a>
                       <div class="dropdown-menu">
-                        <a href="/category/1" class="dropdown-item">Action</a>
-                        <a href="/category/2" class="dropdown-item">Adventure</a>
-                        <a href="/category/3" class="dropdown-item">Romance</a>
+                        @foreach ($category as $c )
+                          <a href="/category/{{$c->id}}" class="dropdown-item">{{$c->name}}</a>
+                        @endforeach
+                       
                       </div>
                     </div>
                     <a href="#" class="item-menu" onclick="handleClickMenu(this)">
