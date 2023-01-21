@@ -34,6 +34,16 @@
                        
                       </div>
                     </div>
+                    <div id="drop-con" style="display: flex; flex-direction: row;">
+                      <a href="#" class="item-menu dropdown-btn" >
+                        Manage Film <i class="fa fa-caret-down"></i>
+                      </a>
+                      <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Add Film</a>
+                        <a href="{{route('indexfilm')}}" class="dropdown-item">View All Film</a>
+                       
+                      </div>
+                    </div>
                     <a href="#" class="item-menu" onclick="handleClickMenu(this)">
                       <p>History</p>
                     </a>

@@ -21,3 +21,5 @@ Route::get('/', [FilmController::class,'index'])->name('home');
 Route::get('/category/{id}', [CategoryController::class, 'show']);
 
 Route::get('/contact', [ContactController::class, 'contact']);
+
+Route::get('/film-index',[FilmController::class,'viewInsertForm'])->name('indexfilm');
