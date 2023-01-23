@@ -109,5 +109,14 @@ class FilmController extends Controller
         return redirect()->route('indexfilm')-> with('success','item updated succesfully');
 
     }
- 
+    public function delete_film($id){
+        $data = Film::find($id);
+        if (Storage::exists('public/img/',$data->image)){
+            File::delete(public_path('/storage/img/'.$data->image));
+            $data->delete();
+            return redirect()->route('indexfilm')->with('success','item deleted succesfully');
+        }
+        
+        return redirect()->route('indexfilm')->with('failed','item failed to delete');
+    }
 }

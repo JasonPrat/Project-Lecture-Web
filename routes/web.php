@@ -31,3 +31,5 @@ Route::post('/createpost',[FilmController::class,'create_post'])->name('createpo
 Route::get('/update-film/{id}',[FilmController::class,'viewUpdateForm'])->name('updatefilm');
 
 Route::post('/updatepost',[FilmController::class,'update_post'])->name('updatepost');
+
+Route::delete('/delete/{id}',[FilmController::class,'delete_film'])->name('deletefilm');

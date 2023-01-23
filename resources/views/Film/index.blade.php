@@ -73,11 +73,11 @@
                         <td>
                             <div class="w-60 btn-group " role="group">
                             <a href="{{route('updatefilm',['id'=>$f->id])}}" class="btn btn-primary mx-2"><i class="bi bi-pencil"></i> Update</a>
-                            {{-- <form action ="{{route('deleteitem',['id'=>$i->id])}}" method="POST">
+                            <form action ="{{route('deletefilm',['id'=>$f->id])}}" method="POST">
                                 {{method_field('DELETE')}}
                                 @csrf
                                 <button type="submit" class="btn btn-danger mx-2" value="DELETE"><i class="bi bi-trash"></i> Delete </button>
-                            </form> --}}
+                            </form>
                             
                             </div>
                         </td>
