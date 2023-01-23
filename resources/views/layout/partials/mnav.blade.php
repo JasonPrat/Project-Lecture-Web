@@ -15,42 +15,38 @@
     </div>
     <hr>
     <nav class="menu flex-fill">
-      <div class="section-menu">
-        <a href="/" class="item-menu active" onclick="handleClickMenu(this)">
-          <p>Home</p>
-        </a>
-        <div id="drop-con" style="display: flex; flex-direction: row;">
-          <a href="#" class="item-menu dropdown-btn" >
-            Category <i class="fa fa-caret-down"></i>
-          </a>
-          <div class="dropdown-menu">
-            @foreach ($category as $c )
-              <a href="/category/{{$c->id}}" class="dropdown-item">{{$c->name}}</a>
-            @endforeach
-           
-          </div>
-        </div>
-        <div id="drop-con" style="display: flex; flex-direction: row;">
-          <a href="#" class="item-menu dropdown-btn" >
-            Manage Film <i class="fa fa-caret-down"></i>
-          </a>
-          <div class="dropdown-menu">
-            <a href="{{route('createfilm')}}" class="dropdown-item">Add Film</a>
-            <a href="{{route('indexfilm')}}" class="dropdown-item">View All Film</a>
-           
-          </div>
-        </div>
-        <a href="#" class="item-menu" onclick="handleClickMenu(this)">
-          <p>History</p>
-        </a>
+        <div class="section-menu">
+            <a href="/" class="item-menu active" onclick="handleClickMenu(this)">
+            <p>Home</p>
+            </a>
+            <div id="drop-con" style="display: flex; flex-direction: row;">
+                <a href="#" class="item-menu dropdown-btn" >
+                    Category <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    @foreach ($category as $c )
+                    <a href="/category/{{$c->id}}" class="dropdown-item">{{$c->name}}</a>
+                    @endforeach
+                
+                </div>
+            </div>
+            
+            <a href="#" class="item-menu" onclick="handleClickMenu(this)">
+                <p>History</p>
+            </a>
+            <a href="#" class="item-menu" onclick="handleClickMenu(this)">
+                <p>Profile</p>
+            </a>
 
-        <a href="/contact" class="item-menu" onclick="handleClickMenu(this)">
-          <p>Contact</p>
-        </a>
-        <a href="{{route('logout')}}" class="item-menu" onclick="handleClickMenu(this)">
-          <p>Logout</p>
-        </a>
-      </div>
+            <a href="/contact" class="item-menu" onclick="handleClickMenu(this)">
+                <p>Contact</p>
+            </a>
+            <a href="{{route('logout')}}" class="item-menu" onclick="handleClickMenu(this)">
+                <p>Logout</p>
+            </a>
+        
+        </div>
+        
       
     </nav>
     <footer>

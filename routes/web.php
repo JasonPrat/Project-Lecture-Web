@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FilmController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,3 +34,13 @@ Route::get('/update-film/{id}',[FilmController::class,'viewUpdateForm'])->name('
 Route::post('/updatepost',[FilmController::class,'update_post'])->name('updatepost');
 
 Route::delete('/delete/{id}',[FilmController::class,'delete_film'])->name('deletefilm');
+
+Route::get('/login',[LoginController::class,'loginPage'])->name('login');
+
+Route::post('/loginpost',[LoginController::class,'loginPost'])->name('loginPost');
+
+Route::get('/logout',[LoginController::class,'logout'])->name('logout');
+
+Route::get('/register',[LoginController::class,'registers'])->name('register');
+
+Route::post('/registpost',[LoginController::class,'register_post'])->name('registPost');
