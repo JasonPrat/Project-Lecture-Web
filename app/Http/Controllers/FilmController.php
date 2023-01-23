@@ -23,6 +23,11 @@ class FilmController extends Controller
         $film=Film::paginate(6);
         return view('welcome',['film'=>$film,'category'=>$category]);
     }
+    public function viewDetail($id){
+        $category=Category::all();
+        $film = Film::findOrFail($id);
+        return view('Film.details',['film'=>$film,'category'=>$category]);
+    }
     public function viewIndexForm(){
         $category=Category::all();
         $film = Film::all();

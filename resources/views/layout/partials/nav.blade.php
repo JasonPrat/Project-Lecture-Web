@@ -41,7 +41,7 @@
           </div>
         </div>
         <a href="#" class="item-menu" onclick="handleClickMenu(this)">
-          <p>History</p>
+          <p>History Transaction</p>
         </a>
 
         <a href="/contact" class="item-menu" onclick="handleClickMenu(this)">

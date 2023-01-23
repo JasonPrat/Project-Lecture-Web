@@ -44,3 +44,5 @@ Route::get('/logout',[LoginController::class,'logout'])->name('logout');
 Route::get('/register',[LoginController::class,'registers'])->name('register');
 
 Route::post('/registpost',[LoginController::class,'register_post'])->name('registPost');
+
+Route::get('/details/{id}',[FilmController::class,'viewDetail'])->name('details');
