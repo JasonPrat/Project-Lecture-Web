@@ -20,7 +20,6 @@
           <p>Home</p>
         </a>
        
-        
         <a href="{{route('login')}}" class="item-menu" onclick="handleClickMenu(this)">
           <p>Login</p>
         </a>

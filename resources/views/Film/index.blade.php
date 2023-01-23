@@ -12,10 +12,53 @@
     </section>
   
     <section class="d-flex flex-column gap-3">
-      <div class="d-flex justify-content-between align-items-center gap-3">
-        <h4 class="title-section-content">All Film</h4>
-      </div>
-  
+        <div class="d-flex justify-content-between align-items-center gap-3">
+            <h4 class="title-section-content">View All Film</h4>
+        </div>
+
+        <table class="table table-dark table-striped mb-2 pb-2 my-3">
+            <thead class="fw-bold">
+                <tr>
+                    <th>Film ID</th>
+                    <th>Film Poster</th>
+                    <th>Film Title</th>
+                    <th>Film Synopsis</th>
+                    <th>Film Price</th>
+                    <th>Film Rent Price</th>
+                    <th>Film Category</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="m-3">
+                @foreach ($film as $f)
+                <tr>
+                    <td><p class="my-3">{{ $f->id }}</p></td>
+                    <td><img width="150px" height="150px" class="shadow m-3 bg-body rounded" src="{{ Storage::url('image/' . $f->image) }}" alt="error"></td>
+                    <td><p class="my-3">{{ $f->title }}</p></td>
+                    <td><p class="my-3">{{ $f->synopsis }}</p></td>
+                    <td><p class="my-3" >{{ $f->price }}</p></td>
+                    <td><p class="my-3" >{{ $f->rent_price }}</p></td>
+                    <td><p class="my-3" >{{ $f->category->name }}</p></td>
+                    
+                    <td class="inline">
+                        {{-- Update --}}
+                        <a class="btn btn-outline-warning mx-3 my-3 px-3" href="{{route('updatefilm',['id'=>$f->id])}}">Update</a>
+                        
+                        {{-- Delete --}}
+                        <form action="{{route('deletefilm',['id'=>$f->id])}}" method="POST">
+                            {{ method_field('DELETE') }}
+                            @csrf
+                            <input type="submit" class="btn btn-outline-danger mx-3 px-3" name="Delete" value="Delete">
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </section>
+</main>
+@endsection
+{{-- 
       <div class="d-flex gap-3 flex-wrap">
         <table class= "table table-hover table-bordered"style="width:100%">
             <thead >
@@ -86,6 +129,4 @@
             </tbody>
         </table>
       </div>
-    </section>
-  </main>
-@endsection
+    </section> --}}

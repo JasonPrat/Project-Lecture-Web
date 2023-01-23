@@ -10,82 +10,109 @@
         </div>
       </nav>
     </section>
-  
-    <section class="d-flex flex-column gap-3">
-        <form action="{{route('createpost')}}" method="post" enctype="multipart/form-data">
-            @csrf
-            <div class="border-info p-3 mt-4">
-                <div class="row pt-2">
-                    <h2 class ="text-info">Add New Film</h2>
+    
+    <section class="vh-50">
+        <div class="container">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-xl-12">
+              <div class="card text shadow" style="border-radius: 25px;">
+                <div class="card-body p-md-5">
+                  <div class="row justify-content-center">
+                    <form action="{{route('createpost')}}" class="mx-1 mx-md-4" method="post" enctype="multipart/form-data">
+                        <p class="text-primary text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Add New Film</p>
+                        @csrf
+
+                        <div class="d-flex flex-row align-items-center mb-3">
+                            <div class="form-outline flex-fill">
+                            <label class="form-label fw-bold" for="title">Title</label>
+                            <input type="text" name="title" class="form-control @error('item_name')
+                                is-invalid
+                                @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Film Title" >
+                                @error('title')
+                                    <div class="invalid-feedback">
+                                        {{$message}}
+                                    </div>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-3">
+                            <div class="form-outline flex-fill">
+                            <label class="form-label fw-bold" for="category">Film Genre</label>
+                            <select name="category_id" class="form-select" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Value">
+                                @foreach ($category as $c)
+                                    <option value="{{$c->id}}">{{$c->name}}</option>
+                                @endforeach
+                            </select>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-3">
+                            <div class="form-outline flex-fill">
+                            <label class="form-label fw-bold" for="price">Film Price</label>
+                            <input type="text" name="price" class="form-control @error('price')
+                                is-invalid
+                                @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Film Price" >
+                                @error('price')
+                                    <div class="invalid-feedback">
+                                        {{$message}}
+                                    </div>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-3">
+                            <div class="form-outline flex-fill">
+                            <label class="form-label fw-bold" for="price">Film Rent Price</label>
+                            <input type="text" name="rent_price" class="form-control @error('price')
+                                is-invalid
+                                @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Rent Price" >
+                                @error('rent_price')
+                                    <div class="invalid-feedback">
+                                        {{$message}}
+                                    </div>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-3">
+                            <div class="form-outline flex-fill">
+                            <label class="form-label fw-bold" for="synopsis">Film Synposis</label>
+                            <textarea type="text" name="synopsis" class="form-control @error('item_desc')
+                                is-invalid
+                                @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Film Synopsis" ></textarea>
+                                @error('synopsis')
+                                    <div class="invalid-feedback">
+                                        {{$message}}
+                                    </div>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-3">
+                            <div class="form-outline flex-fill">
+                            <label class="form-label fw-bold" for="images">Film Poster</label>
+                            <input type="file"id="images" name="images" class="form-control @error('images')
+                                is-invalid
+                                @enderror">
+                                @error('images')
+                                    <div class="invalid-feedback">
+                                        {{$message}}
+                                    </div>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center mb-3">
+                            <button type="submit" class="btn btn-dark btn-lg rounded-5 p-2 px-5">Add Film</button>
+                        </div>
+                    </form>
+                  </div>
                 </div>
+              </div>
             </div>
-            
-            <div class="form-group mb-3">
-                <label for ="title" class="form-label" ><h4>Title</h4></label>
-                <input type="text" name="title" class="form-control @error('item_name')
-                is-invalid
-                @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Film Title" >
-                @error('title')
-                    <div class="invalid-feedback">
-                        {{$message}}
-                    </div>
-                @enderror
-            </div>
-            <div class="form-group mb-3">
-                <label for ="category" class="form-label" ><h4>Film Genre</h4></label>
-                <select name="category_id" class="form-select" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Value">
-                    @foreach ($category as $c)
-                        <option value="{{$c->id}}">{{$c->name}}</option>
-                    @endforeach
-                </select>
-            </div>
-            <div class="form-group mb-3">
-                <label for ="price" class="form-label" ><h4>Film Price</h4></label>
-                <input type="text" name="price" class="form-control @error('price')
-                is-invalid
-                @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Film Price" >
-                @error('price')
-                    <div class="invalid-feedback">
-                        {{$message}}
-                    </div>
-                @enderror
-            </div>
-            <div class="form-group mb-3">
-                <label for ="rent_price" class="form-label" ><h4>Film Rent Price</h4></label>
-                <input type="text" name="rent_price" class="form-control @error('price')
-                is-invalid
-                @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Rent Price" >
-                @error('rent_price')
-                    <div class="invalid-feedback">
-                        {{$message}}
-                    </div>
-                @enderror
-            </div>
-            <div class="form-group mb-3">
-                <label for ="synopsis" class="form-label"><h4>Film Synopsis</h4></label>
-                <textarea type="text" name="synopsis" class="form-control @error('item_desc')
-                is-invalid
-                @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Film Synopsis" ></textarea>
-                @error('synopsis')
-                    <div class="invalid-feedback">
-                        {{$message}}
-                    </div>
-                @enderror
-            </div>
-            <div class="form-group mb-3">
-                <label for="images" class="form-label" ><h4>Film Image</h4></label>
-                <input type="file"id="images" name="images" class="form-control @error('images')
-                is-invalid
-                @enderror">
-                @error('images')
-                    <div class="invalid-feedback">
-                        {{$message}}
-                    </div>
-                @enderror
-            </div>
-            <button  type="submit" class="btn btn-outline-primary" style="width: 150px">Add Film</button>
-            
-        </form>
+          </div>
+        </div>
     </section>
 </main>
 
