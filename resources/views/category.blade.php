@@ -20,7 +20,7 @@
     <div class="d-flex gap-3 flex-wrap">
       @foreach ($ct->film as $f)
         <div class="product-card text-center ">
-          <img height="300" width="200" src="{{ asset('img/'. $f->image)}}" alt="Error"/>
+          <img height="300" width="200" src="{{ Storage::url('public/img/'.$f->image)}}" alt="Error"/>
           <div class="product-detail pt-3 ">
             <div >
               <p class="title-detail">{{$f->title}}</p>

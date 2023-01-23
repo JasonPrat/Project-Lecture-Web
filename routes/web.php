@@ -22,4 +22,8 @@ Route::get('/category/{id}', [CategoryController::class, 'show']);
 
 Route::get('/contact', [ContactController::class, 'contact']);
 
-Route::get('/film-index',[FilmController::class,'viewInsertForm'])->name('indexfilm');
+Route::get('/film-index',[FilmController::class,'viewIndexForm'])->name('indexfilm');
+
+Route::get('/create-film',[FilmController::class,'viewInsertForm'])->name('createfilm');
+
+Route::post('/createpost',[FilmController::class,'create_post'])->name('createpost');

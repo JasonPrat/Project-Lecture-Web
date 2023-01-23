@@ -35,7 +35,7 @@
             Manage Film <i class="fa fa-caret-down"></i>
           </a>
           <div class="dropdown-menu">
-            <a href="#" class="dropdown-item">Add Film</a>
+            <a href="{{route('createfilm')}}" class="dropdown-item">Add Film</a>
             <a href="{{route('indexfilm')}}" class="dropdown-item">View All Film</a>
            
           </div>
