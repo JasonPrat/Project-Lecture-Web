@@ -85,7 +85,7 @@ class FilmController extends Controller
         $name='';
         if($request->file('images')){
             $file= $request->file('images');
-            $name= time().'.'.$file->getClientOriginalExtension();
+            $name= $file->getClientOriginalName();
             Storage::putFileAs('public/img',$file,$name);
             File::delete(public_path('/storage/img/'.$data->images));          
         }
