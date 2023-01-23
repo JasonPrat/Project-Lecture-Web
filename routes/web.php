@@ -27,3 +27,7 @@ Route::get('/film-index',[FilmController::class,'viewIndexForm'])->name('indexfi
 Route::get('/create-film',[FilmController::class,'viewInsertForm'])->name('createfilm');
 
 Route::post('/createpost',[FilmController::class,'create_post'])->name('createpost');
+
+Route::get('/update-film/{id}',[FilmController::class,'viewUpdateForm'])->name('updatefilm');
+
+Route::post('/updatepost',[FilmController::class,'update_post'])->name('updatepost');
