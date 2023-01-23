@@ -3,8 +3,7 @@
     @extends('layout.partials.head')
       <body>
             
-                @include('layout.partials.nav')
-            </aside>
+            @include('layout.partials.nav')
             @yield('content')
 
             @extends('layout.partials.footer')
