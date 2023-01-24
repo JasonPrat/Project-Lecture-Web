@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
             CategorieSeeder::class,
             FilmSeeder::class,
             UserSeeder::class,
+            TransactionSeeder::class,
+            TransactionDetailSeeder::class
         ]);
     }
 }
