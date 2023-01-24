@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FilmController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,3 +47,11 @@ Route::get('/register',[LoginController::class,'registers'])->name('register');
 Route::post('/registpost',[LoginController::class,'register_post'])->name('registPost');
 
 Route::get('/details/{id}',[FilmController::class,'viewDetail'])->name('details');
+
+Route::post('/buy',[TransactionController::class,'buy'])->name('buy');
+
+Route::post('/rent',[TransactionController::class,'rent'])->name('rent');
+
+Route::get('/transindex',[TransactionController::class,'index_member'])->name('transindex');
+
+Route::get('/transindexadmin',[TransactionController::class,'index_admin'])->name('admintrans');

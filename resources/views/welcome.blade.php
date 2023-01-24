@@ -45,7 +45,7 @@
               <p class="label-detail mb-1">Price:</p>
               <p class="price-detail">${{$f->price }}</p>
             </div>
-            <button class="buy-product button btn-rounded" onclick="handleBuy(this)">Buy Now</button>
+            <a class="buy-product button btn-rounded" href="{{route('details',['id'=>$f->id])}}" onclick="handleBuy(this)">Details</a>
           </div>
         </div>
       @endforeach

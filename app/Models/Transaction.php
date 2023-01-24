@@ -19,8 +19,8 @@ class Transaction extends Model
     public function user(){
         return $this->belongsTo(User::class,'user_id');
     }
-    public function grandtotal($grandtotal){
-        $this->attributes['grandtotal']=$grandtotal;
+    public function grandtotal($cartdetails,$subtotal){
+        $this->attributes['grandtotal']=$cartdetails->grandtotal+$subtotal;
         self::save();
     }
 }

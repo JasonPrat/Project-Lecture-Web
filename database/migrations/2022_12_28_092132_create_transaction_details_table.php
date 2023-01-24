@@ -17,7 +17,6 @@ class CreateTransactionDetailsTable extends Migration
             $table->id();
             $table->foreignId('transaction_id');
             $table->foreignId('film_id');
-            $table->integer('quantity');
             $table->double('subtotal',12,2);
             $table->timestamps();
         });
