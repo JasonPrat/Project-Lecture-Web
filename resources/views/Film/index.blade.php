@@ -5,7 +5,11 @@
       <nav class="nav-content gap-3">
         <div class="d-flex gap-3 align-items-center">
           <div>
-            <p class="title-content mb-2">Good Morning, User</p>
+            @auth
+          <p class="title-content mb-2">Good Morning, {{Auth::user()->name}}</p>
+          @else
+          <p class="title-content mb-2">Welcome to Disniplix</p>
+          @endauth
           </div>
         </div>
       </nav>

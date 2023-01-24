@@ -5,8 +5,12 @@
         <nav class="nav-content gap-3">
           <div class="d-flex gap-3 align-items-center">
             <div>
+              @auth
+                <p class="title-content mb-2">Hello, {{Auth::user()->name}}</p>
+              @else 
+                <p class="title-content mb-2">Welcome To Disniplix</p>
+              @endauth
               
-              <p class="title-content mb-2">Hello, {{Auth::user()->name}}</p>
               
             </div>
           </div>
@@ -47,20 +51,23 @@
                                 <h4 class="text-dark">{{$film->synopsis}}</h4>
                             </div>
                             <div class="row pl-2 text-end">
-                                {{-- @auth
+                                @auth
                                     @if (Auth::user()->role=="member")
-                                        <form class=" text-end" action="{{route('createcart')}}" method="POST">
+                                        <form class=" text-end" action="{{route('buy')}}" method="POST">
                                             @csrf
-                                            <label>Qty</label>
-                                            <input type="hidden" name="item_id" value="{{$item->id}}">
-                                            <input type="number" name="qty" min="1" style="width:100px" >
-                                             <button type="submit" class="btn btn-outline-primary btn-primary text-white rounded-4" style="widht: 200px">Add to cart</button>
+                                            <input type="hidden" name="film_id" value="{{$film->id}}">
+                                            <button type="submit" class="btn btn-outline-primary btn-primary text-white rounded-4" style="widht: 200px">Buy</button>
+                                        </form>
+                                        <form class=" text-end" action="{{route('rent')}}" method="POST">
+                                            @csrf
+                                            <input type="hidden" name="film_id" value="{{$film->id}}">
+                                            <button type="submit" class="btn btn-outline-primary btn-primary text-white rounded-4" style="widht: 200px">Rent</button>
                                         </form>
                                     
                                     @endif
                                 @else
                                     <a class="btn btn-outline-primary btn-primary text-white rounded-4" style="width: 200px" href="{{route('login')}}">Login To Buy</a>
-                                @endauth --}}
+                                @endauth
                                 
                             </div>
                         </div>

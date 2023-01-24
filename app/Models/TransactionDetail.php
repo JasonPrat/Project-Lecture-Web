@@ -11,7 +11,6 @@ class TransactionDetail extends Model
     protected $fillable=[
         'transaction_id',
         'film_id',
-        'quantity',
         'subtotal',
     ];
     public function transaction(){
@@ -19,5 +18,10 @@ class TransactionDetail extends Model
     }
     public function film(){
         return $this->belongsTo(Film::class,'film_id');
+    }
+    public function updatedetail($cartdetail,$harga){
+        
+        $this->attributes['subtotal']=$cartdetail->subtotal+($harga);
+        self::save();
     }
 }
