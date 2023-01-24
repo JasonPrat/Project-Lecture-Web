@@ -47,9 +47,20 @@
         <a href="/contact" class="item-menu" onclick="handleClickMenu(this)">
           <p>Contact</p>
         </a>
+        <div id="drop-con" style="display: flex; flex-direction: row;">
+          <a href="#" class="item-menu dropdown-btn" >
+            Profile <i class="fa fa-caret-down"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="{{route('pwview')}}" class="dropdown-item">Change Password</a>
+            <a href="{{route('editview')}}" class="dropdown-item">Edit Profile</a>
+           
+          </div>
+        </div>
         <a href="{{route('logout')}}" class="item-menu" onclick="handleClickMenu(this)">
           <p>Logout</p>
         </a>
+
       </div>
       
     </nav>

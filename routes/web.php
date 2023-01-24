@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FilmController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
@@ -65,6 +66,15 @@ Route::middleware(['auth','member'])->group(
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/logout',[LoginController::class,'logout'])->name('logout');
+    
+    Route::post('/edit-profile',[ProfileController::class,'edit_profile'])->name('editprofile');
+
+    Route::get('/editprofile',[ProfileController::class,'edit_view'])->name('editview');
+
+    Route::get('/change',[ProfileController::class,'changepw_view'])->name('pwview');
+
+    Route::post('/changepw',[ProfileController::class,'change_pw'])->name('changepw');
+
 });
 
 
