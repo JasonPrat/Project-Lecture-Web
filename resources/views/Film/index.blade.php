@@ -33,7 +33,7 @@
                 @foreach ($film as $f)
                 <tr>
                     <td><p class="my-3">{{ $f->id }}</p></td>
-                    <td><img width="150px" height="150px" class="shadow m-3 bg-body rounded" src="{{ Storage::url('image/' . $f->image) }}" alt="error"></td>
+                    <td><img width="150px" height="150px" class="shadow m-3 bg-body rounded" src="{{ Storage::url('public/img/' . $f->image) }}" alt="error"></td>
                     <td><p class="my-3">{{ $f->title }}</p></td>
                     <td><p class="my-3">{{ $f->synopsis }}</p></td>
                     <td><p class="my-3" >{{ $f->price }}</p></td>

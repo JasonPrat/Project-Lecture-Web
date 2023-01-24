@@ -40,7 +40,7 @@
            
           </div>
         </div>
-        <a href="#" class="item-menu" onclick="handleClickMenu(this)">
+        <a href="{{route('admintrans')}}" class="item-menu" onclick="handleClickMenu(this)">
           <p>History Transaction</p>
         </a>
 

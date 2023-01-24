@@ -31,8 +31,8 @@
                 </div>
             </div>
             
-            <a href="#" class="item-menu" onclick="handleClickMenu(this)">
-                <p>History</p>
+            <a href="{{route('transindex')}}" class="item-menu" onclick="handleClickMenu(this)">
+                <p>History transaction</p>
             </a>
             <a href="#" class="item-menu" onclick="handleClickMenu(this)">
                 <p>Profile</p>
